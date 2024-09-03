@@ -1,0 +1,344 @@
+:root {
+    --font-sans: 'Helvetica Neue', Arial, sans-serif;
+    --primary-color: #003DFF;
+    --secondary-color: #FFFFFF;
+    --background-color: #F5F5F5;
+    --button-hover-color: #002EB8;
+    --transition: all 0.3s ease-in-out;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-sans);
+    background-color: #c74374;
+    color: whitesmoke;
+
+}
+
+section {
+    text-align: center;
+    padding: 2em;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+section h1 {
+    font-size: 2.5em;
+    margin-bottom: 1em;
+}
+
+section h2 {
+    font-size: 2em;
+    margin-top: 1.5em;
+}
+
+/* Menú desplegable (Solo para index.html) */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin-top: 1.5em;
+}
+
+.dropbtn {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    font-family: var(--font-sans);
+    border: none;
+    padding: 0.7em 1.5em;
+    border-radius: 10px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--secondary-color);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.dropdown-content button {
+    color: #333;
+    padding: 12px 16px;
+    text-align: left;
+    display: block;
+    background: none;
+    border: none;
+    width: 100%;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-family: var(--font-sans);
+    transition: var(--transition);
+}
+
+.dropdown-content button:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+    background-color: var(--button-hover-color);
+}
+
+/* Estilos generales para login y register */
+section h2 {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 1em;
+    font-size: 2.5em;
+}
+
+section form {
+    padding: 1.5em;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 500px;
+    border-radius: 20px;
+    border: 2px solid rgba(0,0,0,.1);
+    margin: 0 auto;
+}
+
+section form label {
+    width: 100%;
+    padding: 0.2em;
+    margin-bottom: 0.5em;
+}
+
+section form input {
+    width: 100%;
+    margin-bottom: 1em;
+    padding: 0.8em;
+    border-radius: 9px;
+    border: none;
+    outline-color: #003DFF;
+    background-color: #eee;
+}
+
+section form input[type='submit'] {
+    margin-top: 1.5em;
+    background-color: #003DFF;
+    color: #fff;
+    font-family: var(--font-sans);
+    transition: var(--transition);
+}
+
+section form input[type='submit']:active {
+    transform: scale(0.97);
+}
+
+section p {
+    margin-top: 1.5em;
+    text-align: center;
+}
+
+section p a {
+    text-decoration: none;
+    color: #003DFF;
+}
+
+/* Estilos para los botones en login y register */
+section button {
+    background-color: #003DFF;
+    color: #fff;
+    font-family: var(--font-sans);
+    transition: var(--transition);
+    border: none;
+    padding: 0.5em 1em;
+    border-radius: 9px;
+    margin-top: 1.5em;
+    font-size: 1em;
+}
+
+/* Ajustes de estilo para dispositivos móviles */
+@media (max-width: 600px) {
+    section {
+        padding: 1.5em;
+        width: 90%;
+    }
+
+    section h1, section h2 {
+        font-size: 2em;
+    }
+
+    .dropbtn {
+        font-size: 1em;
+        padding: 0.6em 1.2em;
+    }
+}
+.separator {
+    border: 0;
+    border-top: 15px solid #ddd; /* Línea de separación */
+    margin: 0em 0; /* Espaciado arriba y abajo de la línea */
+    width: 100%; /* Asegura que la línea ocupe todo el ancho disponible */
+}
+
+.descripcion {
+    font-size: 1.3em; /* Tamaño de fuente */
+    line-height: 1.1; /* Altura de línea para mejorar la legibilidad */
+    color: whitesmoke; /* Color del texto */
+    margin-top: 1em; /* Espaciado arriba del párrafo */
+    margin-bottom: 1.5em; /* Espaciado abajo del párrafo */
+    text-align: justify; /* Alinear el texto justificado */
+    background-color: gray; /* Color de fondo del párrafo */
+    padding: 1em; /* Agregar relleno interno para que el texto no quede pegado al borde */
+    border-radius: 5px; /* Bordes redondeados para el fondo */
+    background-clip: padding-box; /* Asegura que el fondo no se extienda más allá del padding */
+    word-spacing: -0.05em; /* Reduce el espaciado entre palabras */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+Message {
+    font-size: 2.5em; /* Tamaño del texto */
+    font-weight: bold; /* Negrita */
+    color: white; /* Color del texto */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra del texto */
+    margin-bottom: 0.5em; /* Espaciado debajo del encabezado */
+    text-align: center; /* Centrar el texto */
+    background-color: gray; /* Fondo blanco con transparencia */
+    padding: 0.5em; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+
+h2 strong {
+    font-weight: bold; /* Asegura que el texto dentro del strong sea negrita */
+    color: white; /* Color del texto dentro del strong */
+    background-color: black;
+    border-radius: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    margin-bottom: 0.5em;
+    font-size: 1.1em;
+    line-height: 1.3;
+    padding: 0.1em ;
+    
+}
+
+.button-container {
+    text-align: center; /* Centrar el botón */
+    margin-top: 1.5em; /* Espacio arriba del botón */
+}
+
+#navigateButton {
+    background-color: #28a745; /* Color de fondo del botón */
+    color: #fff; /* Color del texto del botón */
+    border: none; /* Sin borde */
+    padding: 0.7em 1.5em; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 1em; /* Tamaño de la fuente */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s ease; /* Transición para el color de fondo */
+}
+
+#navigateButton:hover {
+    background-color: #218838; /* Color de fondo en hover */
+}
+
+
+/* Estilo para la nueva sección de video */
+.video-section {
+    text-align: center;
+    margin-top: 1em;
+}
+
+.responsive-video {
+    max-width: 100%;
+    height: 190px;
+    border-radius: 6px; /* Opcional: para bordes redondeados */
+}
+
+
+.custom-image {
+    width: 100%; /* Ajusta la imagen al 100% del contenedor */
+    max-width: 600px; /* Máximo ancho de la imagen */
+    height: auto; /* Mantén la proporción original de la imagen */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para darle profundidad */
+}
+
+.video-caption {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: white;
+    margin-top: 1em;
+    font-family: sans-serif;
+    background-color: #000; /* Fondo blanco con transparencia */
+    border-radius: 10px;
+}
+
+.custom-button {
+    background-color: #4CAF50; /* Color de fondo */
+    color: white; /* Color del texto */
+    padding: 10px 20px; /* Espaciado interno del botón */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    font-size: 16px; /* Tamaño de la fuente */
+    transition: background-color 0.3s; /* Animación para cambio de color */
+    font-family: sans-serif;
+}
+
+.custom-button:hover {
+    background-color: #45a049;
+}
+
+.welcome{
+    font-family: cursive;
+    background-color: #000; /* Fondo blanco con transparencia */
+    border-radius: 10px;
+}
+
+.container {
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    height: 100vh; /* Altura del contenedor, ajustable según tus necesidades */
+}
+
+.video-caption2 {
+    font-size: 2em;
+    color: #fff;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 0.9em;
+}
+
+footer p {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.imagen-responsiva {
+    width: 100%;  /* La imagen ocupará el 100% del ancho de su contenedor */
+    height: auto;  /* Mantiene la proporción de la imagen */
+    max-width: 90%;  /* Evita que la imagen sea más grande que su contenedor */
+    display: block;  /* Elimina el espacio debajo de la imagen */
+    margin: 0 auto;  /* Centra la imagen si su contenedor es más grande */
+    border-radius: 5px;
+}
+
+.separador-bonito {
+    border: none;
+    height: 9px;  /* Grosor del separador */
+    background: linear-gradient(to right, #ff7e5f, #ffffff);  /* Degradado de colores */
+    margin: 20px 0;  /* Espacio superior e inferior */
+    border-radius: 5px;  /* Bordes redondeados */
+}
